@@ -11,7 +11,7 @@ import SwiftUI
 struct TCALearningApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            BooksListView()
         }
     }
 }
