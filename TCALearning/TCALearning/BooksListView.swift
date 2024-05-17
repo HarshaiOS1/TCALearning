@@ -9,24 +9,40 @@ import SwiftUI
 import ComposableArchitecture
 
 struct BooksListView: View {
+    let store: StoreOf<BookListReducer>
+    
+    
     var body: some View {
         NavigationView {
-            Text("Hello, world!")
+            WithViewStore(self.store, observe: { $0 }) { viewStore in
+                List {
+                    if let books = viewStore.books {
+                        ForEach(books, id:  \.isbn) { book in
+                            Text(book.name ?? "")
+                        }
+                    } else {
+                        Text("Book list is empty")
+                    }
+                }
+                
                 .navigationTitle("Books")
                 .navigationBarTitleDisplayMode(.inline)
                 .toolbar(content: {
                     ToolbarItem(placement: .topBarTrailing) {
                         Button(action: {
-                            
+                            viewStore.send(.fetchBooks)
                         }) {
                             Image(systemName: "arrow.clockwise.square")
                         }
                     }
                 })
+            }
         }
     }
 }
 
 #Preview {
-    BooksListView()
+    BooksListView(store: Store(initialState: BookListReducer.State(), reducer: {
+        BookListReducer()
+    }))
 }

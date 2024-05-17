@@ -6,12 +6,15 @@
 //
 
 import SwiftUI
+import ComposableArchitecture
 
 @main
 struct TCALearningApp: App {
     var body: some Scene {
         WindowGroup {
-            BooksListView()
+            BooksListView(store: Store(initialState: BookListReducer.State(), reducer: {
+                BookListReducer()
+            }))
         }
     }
 }

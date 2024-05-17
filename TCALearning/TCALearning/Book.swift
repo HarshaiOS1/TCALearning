@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Book: Codable, Equatable{
+struct Book: Codable, Equatable {
     let url: String?
     let name, isbn: String?
     let authors: [String]?
