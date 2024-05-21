@@ -21,18 +21,19 @@ struct BooksListView: View {
     }
     
     var body: some View {
-        NavigationView {
+        NavigationStackStore(self.store.scope(state: \.path, action: { .path($0) })) {
             //            WithViewStore(self.store, observe: { $0 }) { viewStore in
             List {
                 if let books = viewStore.books {
                     ForEach(books, id:  \.isbn) { book in
-                        Text(book.name ?? "")
+                        NavigationLink(state: BookDetailReducer.State(book: book)) {
+                            Text(book.name ?? "")
+                        }.buttonStyle(.borderless)
                     }
                 } else {
                     Text("Book list is empty")
                 }
             }
-            
             .navigationTitle("Books")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar(content: {
@@ -44,6 +45,8 @@ struct BooksListView: View {
                     }
                 }
             })
+        } destination: { store in
+            BookDetailView(store: store)
         }
         //        }
     }
