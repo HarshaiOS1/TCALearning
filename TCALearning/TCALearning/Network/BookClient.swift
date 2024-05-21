@@ -10,7 +10,6 @@ import ComposableArchitecture
 
 struct BookClient {
     var fetchCharacters: ([String]) async throws -> [Character]?
-    
 }
 
 extension BookClient: DependencyKey {
@@ -43,7 +42,6 @@ extension BookClient: DependencyKey {
         return results
     }
 }
-
 
 extension DependencyValues {
     var bookClient: BookClient {

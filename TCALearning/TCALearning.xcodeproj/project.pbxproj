@@ -21,6 +21,7 @@
 		1DDBAC6C2BFCAD990045329F /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DDBAC6B2BFCAD990045329F /* Character.swift */; };
 		1DDBAC6E2BFCADD40045329F /* BookDetailReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DDBAC6D2BFCADD40045329F /* BookDetailReducer.swift */; };
 		1DDBAC752BFCB6CA0045329F /* BookClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DDBAC742BFCB6CA0045329F /* BookClient.swift */; };
+		1DDBAC792BFCF2470045329F /* BookDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DDBAC782BFCF2470045329F /* BookDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		1DDBAC6B2BFCAD990045329F /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
 		1DDBAC6D2BFCADD40045329F /* BookDetailReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailReducer.swift; sourceTree = "<group>"; };
 		1DDBAC742BFCB6CA0045329F /* BookClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookClient.swift; sourceTree = "<group>"; };
+		1DDBAC782BFCF2470045329F /* BookDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,6 +177,7 @@
 			isa = PBXGroup;
 			children = (
 				1DDBAC6D2BFCADD40045329F /* BookDetailReducer.swift */,
+				1DDBAC782BFCF2470045329F /* BookDetailView.swift */,
 			);
 			path = BookDetailView;
 			sourceTree = "<group>";
@@ -335,6 +338,7 @@
 				1D4AADF82BF776C900A49799 /* Book.swift in Sources */,
 				1DDBAC6E2BFCADD40045329F /* BookDetailReducer.swift in Sources */,
 				1D4AADCA2BF763A200A49799 /* BooksListView.swift in Sources */,
+				1DDBAC792BFCF2470045329F /* BookDetailView.swift in Sources */,
 				1DDBAC6C2BFCAD990045329F /* Character.swift in Sources */,
 				1DDBAC752BFCB6CA0045329F /* BookClient.swift in Sources */,
 				1D4AADC82BF763A200A49799 /* TCALearningApp.swift in Sources */,

@@ -9,8 +9,9 @@ import Foundation
 import ComposableArchitecture
 
 class BookDetailReducer: Reducer {
+    @Dependency(\.bookClient) var bookclient
     
-    struct State {
+    struct State: Equatable {
         var book: Book
         var characters: [Character]?
         var isLoading: Bool = false
@@ -25,7 +26,14 @@ class BookDetailReducer: Reducer {
         switch action {
         case .fetchCharacters:
             state.isLoading = true
-            return .none
+            if let characterUrls = state.book.characters {
+                return .run { send in
+                    let characters = try? await self.bookclient.fetchCharacters(characterUrls)
+                    await send(.characterFetched(characters))
+                }
+            } else {
+                return .none
+            }
         case .characterFetched(let characters):
             state.isLoading = false
             state.characters = characters

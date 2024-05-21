@@ -9,6 +9,7 @@ import Foundation
 import ComposableArchitecture
 
 class BookListReducer: Reducer {
+    
     struct State: Equatable {
         var books: [Book]?
     }
