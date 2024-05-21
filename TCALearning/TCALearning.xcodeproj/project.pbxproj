@@ -18,6 +18,9 @@
 		1D4AADF62BF7727600A49799 /* BookListReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D4AADF52BF7727600A49799 /* BookListReducer.swift */; };
 		1D4AADF82BF776C900A49799 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D4AADF72BF776C900A49799 /* Book.swift */; };
 		1D4AADFA2BF77ACA00A49799 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D4AADF92BF77ACA00A49799 /* Constants.swift */; };
+		1DDBAC6C2BFCAD990045329F /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DDBAC6B2BFCAD990045329F /* Character.swift */; };
+		1DDBAC6E2BFCADD40045329F /* BookDetailReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DDBAC6D2BFCADD40045329F /* BookDetailReducer.swift */; };
+		1DDBAC752BFCB6CA0045329F /* BookClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DDBAC742BFCB6CA0045329F /* BookClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,9 @@
 		1D4AADF52BF7727600A49799 /* BookListReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookListReducer.swift; sourceTree = "<group>"; };
 		1D4AADF72BF776C900A49799 /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 		1D4AADF92BF77ACA00A49799 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		1DDBAC6B2BFCAD990045329F /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
+		1DDBAC6D2BFCADD40045329F /* BookDetailReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailReducer.swift; sourceTree = "<group>"; };
+		1DDBAC742BFCB6CA0045329F /* BookClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,10 +110,11 @@
 			isa = PBXGroup;
 			children = (
 				1D4AADC72BF763A200A49799 /* TCALearningApp.swift */,
-				1D4AADC92BF763A200A49799 /* BooksListView.swift */,
-				1D4AADF52BF7727600A49799 /* BookListReducer.swift */,
-				1D4AADF72BF776C900A49799 /* Book.swift */,
-				1D4AADF92BF77ACA00A49799 /* Constants.swift */,
+				1DDBAC712BFCB6800045329F /* BookDetailView */,
+				1DDBAC6F2BFCB6530045329F /* BookListView */,
+				1DDBAC702BFCB66F0045329F /* Models */,
+				1DDBAC732BFCB6BB0045329F /* Network */,
+				1DDBAC722BFCB69B0045329F /* Utils */,
 				1D4AADCB2BF763A300A49799 /* Assets.xcassets */,
 				1D4AADCD2BF763A300A49799 /* Preview Content */,
 			);
@@ -144,6 +151,48 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1DDBAC6F2BFCB6530045329F /* BookListView */ = {
+			isa = PBXGroup;
+			children = (
+				1D4AADF52BF7727600A49799 /* BookListReducer.swift */,
+				1D4AADC92BF763A200A49799 /* BooksListView.swift */,
+			);
+			path = BookListView;
+			sourceTree = "<group>";
+		};
+		1DDBAC702BFCB66F0045329F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1D4AADF72BF776C900A49799 /* Book.swift */,
+				1DDBAC6B2BFCAD990045329F /* Character.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		1DDBAC712BFCB6800045329F /* BookDetailView */ = {
+			isa = PBXGroup;
+			children = (
+				1DDBAC6D2BFCADD40045329F /* BookDetailReducer.swift */,
+			);
+			path = BookDetailView;
+			sourceTree = "<group>";
+		};
+		1DDBAC722BFCB69B0045329F /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				1D4AADF92BF77ACA00A49799 /* Constants.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		1DDBAC732BFCB6BB0045329F /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				1DDBAC742BFCB6CA0045329F /* BookClient.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -284,7 +333,10 @@
 			files = (
 				1D4AADFA2BF77ACA00A49799 /* Constants.swift in Sources */,
 				1D4AADF82BF776C900A49799 /* Book.swift in Sources */,
+				1DDBAC6E2BFCADD40045329F /* BookDetailReducer.swift in Sources */,
 				1D4AADCA2BF763A200A49799 /* BooksListView.swift in Sources */,
+				1DDBAC6C2BFCAD990045329F /* Character.swift in Sources */,
+				1DDBAC752BFCB6CA0045329F /* BookClient.swift in Sources */,
 				1D4AADC82BF763A200A49799 /* TCALearningApp.swift in Sources */,
 				1D4AADF62BF7727600A49799 /* BookListReducer.swift in Sources */,
 			);
