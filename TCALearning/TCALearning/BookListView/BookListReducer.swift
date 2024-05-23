@@ -10,6 +10,7 @@ import ComposableArchitecture
 
 class BookListReducer: Reducer {
     
+    @ObservableState
     struct State: Equatable {
         var path = StackState<BookDetailReducer.State>()
         var books: [Book]?
